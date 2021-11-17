@@ -164,6 +164,8 @@
   </div>
 
 </div>
+
+</div>
 <!-- End of row table -->
 
 </div>

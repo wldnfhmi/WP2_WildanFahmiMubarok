@@ -37,7 +37,7 @@ class ModelBuku extends CI_Model
     {
       $this->db->where($where);
     }
-    $this->db->form('buku');
+    $this->db->from('buku');
     return $this->db->get()->row($field);
   }
 
