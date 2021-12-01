@@ -18,7 +18,7 @@
                 <form class="user" method="post" action="<?= base_url('autentifikasi'); ?>">
                   <div class="form-group">
                     <input type="text" class="form-control form-control-user" value="<?= set_value('email'); ?>"
-                      id="exampleInputEmail" placeholder="Masukan Alamat Email" name="email">
+                      id="email" placeholder="Masukan Alamat Email" name="email">
                     <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                   </div>
                   <div class="form-group">
