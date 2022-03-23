@@ -51,7 +51,8 @@
               <div class="h1 mb-0 font-weight-bold text-white">
                 <?php
                 $where = ['dipinjam != 0'];
-                $totaldipinjam = $this->ModelBuku->total('dipinjam' ,$where);
+                $totaldipinjam = $this->ModelBuku->total('dipinjam', $where);
+                echo $totaldipinjam;
                 ?>
               </div>
             </div>
@@ -71,8 +72,9 @@
               <div class="text-md font-weight-bold text-white text-uppercase mb-1">Buku yang dibooking</div>
               <div class="h1 mb-0 font-weight-bold text-white">
                 <?php
-                $where = ['dibooking != 0'];
-                $totaldibooking = $this->ModelBuku->total('dibooking' ,$where);
+                $where = ['dibooking !=0'];
+                $totaldibooking = $this->ModelBuku->total('dibooking', $where);
+                echo $totaldibooking;
                 ?>
               </div>
             </div>
@@ -84,18 +86,18 @@
       </div>
     </div>
   </div>
-  <!-- end row ux -->
+  <!-- end row ux-->
 
   <!-- Divider -->
   <hr class="sidebar-divider">
 
-  <!-- row table -->
+  <!-- row table-->
   <div class="row">
     <div class="table-responsive table-bordered col-sm-5 ml-auto mr-auto mt-2">
       <div class="page-header">
-        <span class="fas fa-users text-primary mt-2"> Data User</span>
-        <a href="<?= base_url('user/data_user'); ?>" class="text-danger"><i class="fas fa-search mt-2 float-right"></i>
-          Tampilkan</a>
+        <span class="fas fa-users text-primary mt-2 "> Data User</span>
+        <a class="text-danger" href="<?php echo base_url('user/data_user'); ?>"><i
+            class="fas fa-search mt-2 float-right"> Tampilkan</i></a>
       </div>
       <table class="table mt-3">
         <thead>
@@ -111,7 +113,7 @@
         <tbody>
           <?php
           $i = 1;
-          foreach($anggota as $a) { ?>
+          foreach ($anggota as $a) { ?>
           <tr>
             <td><?= $i++; ?></td>
             <td><?= $a['nama']; ?></td>
@@ -125,51 +127,50 @@
       </table>
     </div>
 
+
     <div class="table-responsive table-bordered col-sm-5 ml-auto mr-auto mt-2">
       <div class="page-header">
         <span class="fas fa-book text-warning mt-2"> Data Buku</span>
-        <a href="<?= base_url('buku'); ?>" class="text-danger"><i
-            class="fas fa-search text-primary mt-2 float-right"></i>
-          Tampilkan</a>
+        <a href="<?= base_url('buku'); ?>"><i class="fas fa-search text-primary mt-2 float-right"> Tampilkan</i></a>
       </div>
-      <table class="table mt-3">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Judul Buku</th>
-            <th>Pengarang</th>
-            <th>Penerbit</th>
-            <th>Tahun Terbit</th>
-            <th>ISBN</th>
-            <th>Stok</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php
-          $i = 1;
-          foreach($buku as $b) { ?>
-          <tr>
-            <td><?= $i++; ?></td>
-            <td><?= $b['judul_buku']; ?></td>
-            <td><?= $b['pengarang']; ?></td>
-            <td><?= $b['penerbit']; ?></td>
-            <td><?= $b['tahun_terbit']; ?></td>
-            <td><?= $b['isbn']; ?></td>
-            <td><?= $b['stok']; ?></td>
-          </tr>
-          <?php } ?>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table mt-3" id="table-datatable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Judul Buku</th>
+              <th>Pengarang</th>
+              <th>Penerbit</th>
+              <th>Tahun Terbit</th>
+              <th>ISBN</th>
+              <th>Stok</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+            $i = 1;
+            foreach ($buku as $b) { ?>
+            <tr>
+              <td><?= $i++; ?></td>
+              <td><?= $b['judul_buku']; ?></td>
+              <td><?= $b['pengarang']; ?></td>
+              <td><?= $b['penerbit']; ?></td>
+              <td><?= $b['tahun_terbit']; ?></td>
+              <td><?= $b['isbn']; ?></td>
+              <td><?= $b['stok']; ?></td>
+            </tr>
+            <?php } ?>
+          </tbody>
+        </table>
+      </div>
     </div>
+
+
   </div>
-
-</div>
-
-</div>
-<!-- End of row table -->
+  <!-- end of row table-->
 
 </div>
 <!-- /.container-fluid -->
 
 </div>
-<!-- End Page of Main Content -->
+<!-- End of Main Content -->

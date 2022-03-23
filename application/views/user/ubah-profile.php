@@ -3,7 +3,7 @@
 
   <div class="row">
     <div class="col-lg-9">
-      <?= form_open_multipart('user/ubahProfile'); ?>
+      <?= form_open_multipart('user/ubahprofil'); ?>
       <div class="form-group row">
         <label for="email" class="col-sm-2 col-form-label">Email</label>
         <div class="col-sm-10">
@@ -27,7 +27,7 @@
             <div class="col-sm-9">
               <div class="custom-file">
                 <input type="file" class="custom-file-input" id="image" name="image">
-                <label for="image" class="custom-file-label">Pilih file</label>
+                <label class="custom-file-label" for="image">Pilih file</label>
               </div>
             </div>
           </div>
@@ -36,8 +36,8 @@
 
       <div class="form-group row justify-content-end">
         <div class="col-sm-10">
-          <button class="btn btn-primary" type="submit">Ubah</button>
-          <button class="btn btn-dark" onclick="window.history.go(-1)">Kembali</button>
+          <button type="submit" class="btn btn-primary">Ubah</button>
+          <button class="btn btn-dark" onclick="window.history.go(-1)"> Kembali</button>
         </div>
       </div>
 
@@ -46,7 +46,7 @@
   </div>
 
 </div>
-<!-- Container-fluid -->
+<!-- /.container-fluid -->
 
 </div>
 <!-- End of Main Content -->

@@ -18,7 +18,7 @@
                 <form class="user" method="post" action="<?= base_url('autentifikasi'); ?>">
                   <div class="form-group">
                     <input type="text" class="form-control form-control-user" value="<?= set_value('email'); ?>"
-                      id="email" placeholder="Masukan Alamat Email" name="email">
+                      id="email" placeholder="Masukkan Alamat Email" name="email">
                     <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                   </div>
                   <div class="form-group">
@@ -32,16 +32,16 @@
                 </form>
                 <hr>
                 <div class="text-center">
-                  <a href="<?= base_url('autentifikasi/lupaPassword'); ?>" class="small">Lupa Password?</a>
-                </div>
-                <div class="text-center">
-                  <a href="<?= base_url('autentifikasi/registrasi');?>" class="small">Daftar Member!</a>
+                  <a class="small" href="<?= base_url('autentifikasi/registrasi'); ?>">Daftar Member!</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
+
   </div>
+
 </div>

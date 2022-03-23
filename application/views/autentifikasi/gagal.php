@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Gagal Aktifasi Akun</title>
+  <title>Gagal Aktifasi Akun </title>
 
   <!-- Custom fonts for this template-->
   <link href="<?= base_url('assets/'); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -24,13 +24,13 @@
 
 <body id="page-top">
 
-  <!-- Page wrapper -->
+  <!-- Page Wrapper -->
   <div id="wrapper">
 
-    <!-- Content wrapper -->
+    <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
-      <!-- Main content -->
+      <!-- Main Content -->
       <div id="content">
 
         <!-- Begin Page Content -->
@@ -39,38 +39,37 @@
           <!-- 404 Error Text -->
           <div class="text-center">
             <?= $this->session->flashdata('pesan'); ?>
-            <a href="<?= base_url('autentifikasi'); ?>" class="btn btn-secondary">&larr; Close</a>
+            <a href="<?= base_url('autentifikasi'); ?>" class="btn btn-secondar y ">&larr; Close </a>
           </div>
 
+          </d iv>
+          <!-- /.contai n er-fluid -->
+
         </div>
-        <!-- Container-fluid -->
+        <!--End of Main Content -->
 
       </div>
-      <!-- End of main content -->
-
+      <!--End of Content Wrapper  -->
     </div>
-    <!-- End of content wrapper -->
+    <!--End of Page Wrap per -->
 
-  </div>
-  <!-- End of page wrapper -->
+    <!--Scroll to Top Button -->
+    <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
 
-  <!-- Scroll to Top Button -->
-  <a href="#page-top" class="scroll-to-top rounded">
-    <i class="fas fa-angle-up"></i>
-  </a>
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="<?= base_url('assets/'); ?>vendor/jquery/jquery.min.js"></script>
-  <script src="<?= base_url('assets/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="<?= base_url('assets/'); ?>vendor/jquery/jquery.min .js"></script>
+    <script src="<?= base_url('assets/'); ?>vendor/bootstrap/js/bootstrap.bundle.min.j s"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="<?= base_url('assets/'); ?>vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Core plugin JavaScript -->
+    <script src="<?= base_url('assets/'); ?>vendor/jquery-easing/jquery.easing.min.j s"></script>
 
-  <!-- Custom scripts for all pages-->
-  <script src="<?= base_url('assets/'); ?>js/sb-admin-2.min.js"></script>
-  <script>
-  $('.alert-message').alert().delay(3500).slideUp('slow');
-  </script>
+    <!-- Custom scripts  for all  pages-->
+    <script src="<?= base_url('assets/'); ?>js/sb-admin-2.min.js"></script>
+    <script>
+    $('.alert-message').alert().delay(3500).slideUp('slow');
+    </script>
+
 </body>
 
 </html>

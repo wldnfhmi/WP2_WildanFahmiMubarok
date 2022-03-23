@@ -9,7 +9,7 @@
             <div class="text-center">
               <h1 class="h4 text-gray-900 mb-4">Daftar Menjadi Member!</h1>
             </div>
-            <form class="user" action="<?= base_url('autentifikasi/registrasi'); ?>" method="post">
+            <form class="user" method="post" action="<?= base_url('autentifikasi/registrasi'); ?>">
               <div class="form-group">
                 <input type="text" class="form-control form-control-user" id="nama" name="nama"
                   placeholder="Nama Lengkap" value="<?= set_value('nama'); ?>">
@@ -38,10 +38,7 @@
             </form>
             <hr>
             <div class="text-center">
-              <a href="<?= base_url('autentifikasi/lupaPassword'); ?>" class="small">Lupa Password?</a>
-            </div>
-            <div class="text-center">
-              Sudah Menjadi Member?<a href="<?= base_url('autentifikasi'); ?>" class="small">Login!</a>
+              Sudah Menjadi Member?<a class="small" href="<?= base_url('autentifikasi'); ?>"> Login!</a>
             </div>
           </div>
         </div>

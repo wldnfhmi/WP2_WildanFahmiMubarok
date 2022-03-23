@@ -12,13 +12,11 @@
           Tampil Data Mata Kuliah
         </th>
       </tr>
-
       <tr>
         <td colspan="3">
           <hr>
         </td>
       </tr>
-
       <tr>
         <th>Kode MTK</th>
         <th>:</th>
@@ -26,26 +24,23 @@
           <?= $kode; ?>
         </td>
       </tr>
-
       <tr>
-        <th>Nama MTK</th>
-        <th>:</th>
+        <td>Nama MTK</td>
+        <td>:</td>
         <td>
           <?= $nama; ?>
         </td>
       </tr>
-
       <tr>
-        <th>SKS</th>
-        <th>:</th>
+        <td>SKS</td>
+        <td>:</td>
         <td>
           <?= $sks; ?>
         </td>
       </tr>
-
       <tr>
         <td colspan="3" align="center">
-          <a href="<?= base_url('matakuliah');?>">Kembali</a>
+          <a href="<?= base_url('matakuliah'); ?>">Kembali</a>
         </td>
       </tr>
     </table>

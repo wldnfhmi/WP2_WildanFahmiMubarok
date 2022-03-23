@@ -21,7 +21,7 @@
             <option value="<?= $id; ?>" selected="selected"><?= $k; ?></option>
             <?php
                             foreach ($kategori as $k) { ?>
-            <option value="<?= $k['id_kategori']; ?>"><?= $k['nama_kategori']; ?></option>
+            <option value="<?= $k['id']; ?>"><?= $k['kategori']; ?></option>
             <?php } ?>
           </select>
         </div>

@@ -105,7 +105,7 @@ class Buku extends CI_Controller
         $kategori = $this->ModelBuku->joinKategoriBuku(['buku.id' => $this->uri->segment(3)])->result_array();
         foreach ($kategori as $k) {
             $data['id'] = $k['id_kategori'];
-            $data['k'] = $k['id_kategori'];
+            $data['k'] = $k['kategori'];
         }
         $data['kategori'] = $this->ModelBuku->getKategori()->result_array();
 
@@ -213,7 +213,7 @@ class Buku extends CI_Controller
     {
         $data['judul'] = 'Ubah Data Kategori';
         $data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
-        $data['kategori'] = $this->ModelBuku->kategoriWhere(['id_kategori' => $this->uri->segment(3)])->result_array();
+        $data['kategori'] = $this->ModelBuku->kategoriWhere(['id' => $this->uri->segment(3)])->result_array();
 
 
         $this->form_validation->set_rules('kategori', 'Nama Kategori', 'required|min_length[3]', [
@@ -240,7 +240,7 @@ class Buku extends CI_Controller
 
     public function hapusKategori()
     {
-        $where = ['id_kategori' => $this->uri->segment(3)];
+        $where = ['id' => $this->uri->segment(3)];
         $this->ModelBuku->hapusKategori($where);
         redirect('buku/kategori');
     }
